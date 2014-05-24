@@ -22,7 +22,7 @@ function CadPessoa(){
 		  <td bgcolor="#0e1d3c" height="50" align="top" valign="top">
           
           </td>
-		  <td rowspan="2" valign="top" style="background: ##fff url() no-repeat">
+		  <td rowspan="2" valign="top" style="background: #ffff url() no-repeat">
               <style>
 
                    #menu_novo { width: 200px; list-style:none; margin:9px; margin-top:25px; padding:0; }
@@ -42,7 +42,7 @@ function CadPessoa(){
                               position: absolute;
                               z-index: 5;
                               background: url(images/-.jpg) no-repeat 3px 12px; }
-                   }
+                   
             
 
               </style>
