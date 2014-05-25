@@ -71,7 +71,7 @@ class CepDao {
           $result = $this->atualizarBanco(&$conn, $sql);
 
           if ($result != 1) {
-               //print "PrimaryKey Error when updating DB!";
+ 
                return false;
           }
 

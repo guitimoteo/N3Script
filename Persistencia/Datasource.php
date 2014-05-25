@@ -13,7 +13,12 @@ class Datasource {
                 mysql_select_db ($dbName, $this->dbLink);
 	}
 
-
+/**
+ * Executa o sql.
+ * Exemplo: Datasource::executaSql("SELECT * FROM tb_cep");
+ * @param type $sql
+ * @return type
+ */
         function executaSql($sql) {
 
                 $resultado = mysql_query($sql, $this->dbLink);
