@@ -16,12 +16,12 @@
     Estou chamando a url do serviço passando o parâmetro “formato=javascript” e o CEP digitado no formulário
     http://cep.republicavirtual.com.br/web_cep.php?formato=javascript&cep=”+$(“#cep&#8221;).val()
     */
-    $.getScript('http://cep.republicavirtual.com.br/web_cep.php?formato=javascript&cep='+$('#cep').val(), function(){
+    $.getScript('consultarCep.php?cep='+$('#cep').val(), function(){
     // o getScript dá um eval no script, então é só ler!
     //Se o resultado for igual a 1
     if(resultadoCEP['resultado'] && resultadoCEP['bairro'] != ''){
     // troca o valor dos elementos
-    $('#endereco').val(unescape(resultadoCEP['tipo_logradouro'])+': '+unescape(resultadoCEP['logradouro']));
+    $('#endereco').val(unescape(resultadoCEP['logradouro']));
     $('#bairro').val(unescape(resultadoCEP['bairro']));
     $('#cidade').val(unescape(resultadoCEP['cidade']));
     $('#estado').val(unescape(resultadoCEP['uf']));
