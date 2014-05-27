@@ -93,8 +93,8 @@
 	
 
 <br>
-CEP:<span style="padding-left:390px"> <button id=”btn” onclick="getEndereco" >Consultar</button>  Fone Residencial:</span><span style="padding-left:290px"> Celular:</span> <br>
-	<input type="text" CEP ="nome" size="60" value=""> <span style="padding-left:20px"> <input type="text" name ="Celular" size="60" value=""> </span> 
+CEP:<span style="padding-left:390px"> <button id=”btn” onclick="return getEndereco()" >Consultar</button>  Fone Residencial:</span><span style="padding-left:290px"> Celular:</span> <br>
+<input type="text" nome ="cep" id="cep" size="60" value=""> <span style="padding-left:20px"> <input type="text" name ="Celular" size="60" value=""> </span> 
 		<input type="text" name ="nome" size="60" value=""> <br>
 		
 	E-mail:<br>
