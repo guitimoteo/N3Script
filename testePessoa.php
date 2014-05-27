@@ -9,7 +9,7 @@ $pessoaDao = new PessoaDao();
 $pessoa->setTudo("55555", '666666', "bebado", "$enderecoIn", "$bairroIn",
         '$cepIn', '$emailIn', '$sexoIn', '$numeroIn', '$cidadeIn', '$telefoneIn', '$celularIn', 'SP');
 $pessoaDao->inserir($datasource, $pessoa);
-
+//caguei aki
 $pessoaB = $pessoaDao->getObject($datasource, "55555");
 echo $pessoaB->toString();
 ?>
