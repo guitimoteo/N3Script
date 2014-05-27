@@ -27,19 +27,15 @@
     $('#estado').val(unescape(resultadoCEP['uf']));
     //$(“#enderecoCompleto”).show(“slow”);
     $('#numero').focus();
-    //document.getElementById(“load”).style.display = ‘none’;
-    //validate()
     }else{
     alert('Endereço não encontrado');
-    //$(“#enderecoCompleto”).show(“slow”);
     return false;
     }
     });
     }
     else
     {
-    alert('Antes, preencha o campo CEP!')
-    //document.getElementById(“load”).style.display = ‘none’;
+    alert('Preencha o campo CEP!')
     }
     return false;
 
