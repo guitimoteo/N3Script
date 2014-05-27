@@ -56,10 +56,10 @@
 	Nome:<br>
 	<input type="text" name ="nome" size="197" value=""> <br>
 	Endereco:<span style="padding-left:360px">  Numero/Comp.</span> <br>
-	<input type="text" name="endereco" size="60" value=""> <span style="padding-left:20px"> <input type="text" name ="NComp" size="60" value=""></span> <br>
+        <input type="text" name="endereco" id="endereco" size="60" value=""> <span style="padding-left:20px"> <input type="text" name ="NComp" size="60" value=""></span> <br>
 	Bairro:<span style="padding-left:380px">  Cidade:</span><span style="padding-left:350px"> UF:</span> <br>
-	<input type="text" nome ="bairro" size="60" value=""> <span style="padding-left:20px"> <input type="text" name ="uf" size="60" value=""><td>
-<select class="form_campos" name="estado">
+	<input type="text" nome ="bairro" id="bairro" size="60" value=""> <span style="padding-left:20px"> <input type="text" name ="cidade" id="cidade" size="60" value=""><td>
+<select class="form_campos" name="estado" id="estado">
 <option value="Escolha seu Estado">Escolha seu Estado</option>
 <option value="AC">AC</option>
 <option value="AL">AL</option>
