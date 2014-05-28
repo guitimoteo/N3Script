@@ -54,17 +54,17 @@ documento.value += texto.substring(0,1);
 <fieldset>
 	<legend> Dados Pessoais</legend>
 	Codigo:<br>
-	<input type="text" name ="Codigo" size="60" value=""> <br>
+	<input type="text" name ="Codigo" size="60" value="" required> <br>
 	CPF:<br>
-	<input type="text" name ="cpf" size="60" value=""> 
+	<input type="text" name ="cpf" size="60" value="" required> 
 	<input type="radio" name="sexo" value="masculino">Masculino 
 	<input type="radio" name="sexo" value="feminino">Feminino <br>
 	Nome:<br>
         <input type="text" name ="nome" size="197" value="" required > <br>
 	Endereco:<span style="padding-left:360px">  Numero/Comp.</span> <br>
-        <input type="text" name="endereco" id="endereco" size="60" value=""> <span style="padding-left:20px"> <input type="text" name ="NComp" size="60" value=""></span> <br>
+        <input type="text" name="endereco" id="endereco" size="60" value="" required> <span style="padding-left:20px"> <input type="text" name ="NComp" size="60" value="" required></span> <br>
 	Bairro:<span style="padding-left:380px">  Cidade:</span><span style="padding-left:350px"> UF:</span> <br>
-	<input type="text" name="bairro" id="bairro" size="50" value=""> <span style="padding-left:20px"> <input type="text" name="cidade" id="cidade" size="60" value=""><td>
+	<input type="text" name="bairro" id="bairro" size="50" value=""> <span style="padding-left:20px"> <input type="text" name="cidade" id="cidade" size="60" value="" required><td>
 <select class="form_campos" name="estado" id="estado">
 <option value="Escolha seu Estado">Escolha seu Estado</option>
 <option value="AC">AC</option>
@@ -105,9 +105,9 @@ CEP:<span style="padding-left:390px"> <button id=”btn” onclick="return getEn
 <input type="text" name="Celular" size="15" value=""> <br>
 		
 	E-mail:<br>
-        <input type="email" name ="E-mail" size="197" value=""><br><br>
+        <input type="email" name ="E-mail" size="197" required value=""><br><br>
         <input type="submit" value="Cadastrar" formmethod="POST" formaction="cadastrarPessoa.php"> &nbsp;&nbsp;&nbsp
-<input type="submit" value="Tela Inicial"> &nbsp;&nbsp;&nbsp
+        <input type="submit" value="Tela Inicial" formaction="index2.php"> &nbsp;&nbsp;&nbsp
 <input type="submit" value="Tela Veiculos"> &nbsp;&nbsp;&nbsp
 <input type="reset" value="LIMPAR"> 	
 
