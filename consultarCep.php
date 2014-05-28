@@ -17,4 +17,5 @@ echo 'var resultadoCEP = '.$jsonCep;
 }  else {
   $response = array('resultado'=>'1','resultado_txt'=>"Endereço não encontrado");
   $jsonCep = json_encode($response);
+  echo 'var´ resultadoCEP = '.$jsonCep;
 }
