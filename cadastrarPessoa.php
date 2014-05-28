@@ -29,10 +29,13 @@ if(isset($codigoIn) && isset($cpfIn) && isset($nomeIn) && isset($sexoIn)
 $pessoa->setTudo($codigoIn, $cpfIn, $nomeIn, $enderecoIn, $bairroIn, $cepIn, 
                  $emailIn, $sexoIn, $numeroIn, $cidadeIn, $telefoneIn, $celularIn, 
                  $ufIn);
-if($pessoaDao->inserir($datasource, $pessoa))
+if($pessoaDao->inserir($datasource, $pessoa)){
     echo 'Usuário cadastrado com sucesso';
-else
-    echo 'Erro ao cadastrar o usuário';
+echo '<META http-equiv="refresh" content="1; Url=cadastroUsuario.php"> ';}
+else{
+echo 'Erro ao cadastrar o usuário';
+echo '<META http-equiv="refresh" content="1; Url=cadastroUsuario.php"> ';
+}
         }  else {
             echo "Por favor, complete todos os campos";            
 }
