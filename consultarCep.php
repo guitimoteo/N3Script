@@ -10,7 +10,7 @@ $cepCodigo = $_GET['cep'];
 $cep = $cepDao->getObject($datasource, $cepCodigo);
 //echo $cep->getCidade(); Exemplo: mostrando a cidade
 //echo $cep->toString();//Exemplo: mostrando tudo.
-if(isset($cep->getCidade())){
+if(isset($cep->uf)){
  $response = array('uf'=>$cep->getUf(),'cidade'=>$cep->getCidade(),'bairro'=>$cep->getBairro(),'tipo_logradouro'=>" ",'logradouro'=>$cep->getEndereco(),'resultado'=>'2','resultado_txt'=>"sucesso");
   $jsonCep = json_encode($response);
 echo 'var resultadoCEP = '.$jsonCep;
