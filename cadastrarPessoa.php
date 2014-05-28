@@ -31,7 +31,12 @@ $pessoa->setTudo($codigoIn, $cpfIn, $nomeIn, $enderecoIn, $bairroIn, $cepIn,
                  $ufIn);
 $pessoaDao->inserir($datasource, $pessoa);
 echo $pessoa->toString();
-        }
-$pessoaB = $pessoaDao->getObject($datasource, $_POST['Codigo']);
+        }  else {
+            echo $codigoIn.":", $cpfIn.":", $nomeIn.":", $enderecoIn.":", $bairroIn.":", $cepIn.":", 
+                 $emailIn.":", $sexoIn.":", $numeroIn.":", $cidadeIn.":", $telefoneIn.":", $celularIn.":", 
+                 $ufIn.":";            
+}
+        
+//$pessoaB = $pessoaDao->getObject($datasource, $_POST['Codigo']);
 
 ?>

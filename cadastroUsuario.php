@@ -100,7 +100,7 @@ documento.value += texto.substring(0,1);
 
 <br>
 CEP:<span style="padding-left:390px"> <button id=”btn” onclick="return getEndereco()" >Consultar</button>  Fone Residencial:</span><span style="padding-left:290px"> Celular:</span> <br>
-<input type="text" nome ="cep" id="cep" size="9" maxlength="9" value="" required pattern="\d{5}-?\d{3}" onkeydown="formatar('#####-###', this)"> <span style="padding-left:20px"> <input type="text" name ="Celular" size="60" value=""> </span> 
+<input type="text" nome ="cep" id="cep" size="9" maxlength="9" value="" required pattern="\d{5}-?\d{3}" onkeyup="formatar('#####-###', this)"> <span style="padding-left:20px"> <input type="text" name ="Celular" size="60" value=""> </span> 
 		<input type="text" name ="nome" size="60" value=""> <br>
 		
 	E-mail:<br>
