@@ -10,27 +10,14 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <?php
-        include './Persistencia/Datasource.php';
-        include './Persistencia/Pessoa.php';
-        include './Persistencia/PessoaDao.php';
-        $datasource = new Datasource('localhost', 'estacionamento', 'root', '');
-        $pessoa = new Pessoa();
-        $pessoaDao = new PessoaDao();
-        
-        $resultado = $pessoaDao->listar($datasource, $sql);
-        $resultado
-        ?>
-        <form method="post" action="">
-            <input type="" name="">
-            <select name="Usuario">
-                <option value="Escolha o Usuário">Escolha o usuário</option>
-                <?
-                for
-                ?>
-            </select>
-        
+
+        <form method="post">
+            Código do usuário: <input type="text" name="usuario" required pattern="\d*" title="somente numeros"/>&nbsp;&nbsp;&nbsp;
+            Código do veículo: <input type="text" name="veiculo" required pattern="\d*"  title="somente numeros"/>       
+            <br>
             
+            <input type="submit" formaction="cadastrarEntrada.php" value="Entrada"/>&nbsp;&nbsp;&nbsp;
+            <input type="submit" formaction="cadastrarSaida.php" value="Saida"/>
         </form>
         
     </body>

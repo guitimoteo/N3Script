@@ -60,7 +60,7 @@ documento.value += texto.substring(0,1);
 	<input type="radio" name="sexo" value="masculino">Masculino 
 	<input type="radio" name="sexo" value="feminino">Feminino <br>
 	Nome:<br>
-	<input type="text" name ="nome" size="197" value=""> <br>
+        <input type="text" name ="nome" size="197" value="" required > <br>
 	Endereco:<span style="padding-left:360px">  Numero/Comp.</span> <br>
         <input type="text" name="endereco" id="endereco" size="60" value=""> <span style="padding-left:20px"> <input type="text" name ="NComp" size="60" value=""></span> <br>
 	Bairro:<span style="padding-left:380px">  Cidade:</span><span style="padding-left:350px"> UF:</span> <br>
