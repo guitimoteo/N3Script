@@ -12,7 +12,7 @@ and open the template in the editor.
     <body>
 
         <form method="post">
-            Código do usuário: <input type="text" name="usuario" required pattern="\d*" title="somente numeros"/>&nbsp;&nbsp;&nbsp;
+            Código do usuário: <input type="text" name="usuario" required pattern="\d*" title="somente numeros"/><br>&nbsp;&nbsp;&nbsp;
             Código do veículo: <input type="text" name="veiculo" required pattern="\d*"  title="somente numeros"/>       
             <br>
             
