@@ -23,20 +23,19 @@ $ufIn = $_POST['estado'];
 
 if(isset($codigoIn) && isset($cpfIn) && isset($nomeIn) && isset($sexoIn) 
         && isset($enderecoIn) && isset($bairroIn) && isset($cidadeIn) && isset($ufIn)
-        && isset($cepIn) && isset($celularIn) && isset($nomeIn) && isset($numeroIn)
+        && isset($cepIn) && isset($nomeIn) && isset($numeroIn)
         && isset($emailIn) && isset($telefoneIn)){
 
 $pessoa->setTudo($codigoIn, $cpfIn, $nomeIn, $enderecoIn, $bairroIn, $cepIn, 
                  $emailIn, $sexoIn, $numeroIn, $cidadeIn, $telefoneIn, $celularIn, 
                  $ufIn);
-$pessoaDao->inserir($datasource, $pessoa);
-echo $pessoa->toString();
+if($pessoaDao->inserir($datasource, $pessoa))
+    echo 'Usuário cadastrado com sucesso';
+else
+    echo 'Erro ao cadastrar o usuário';
         }  else {
-            echo $codigoIn.":", $cpfIn.":", $nomeIn.":", $enderecoIn.":", $bairroIn.":", $cepIn.":", 
-                 $emailIn.":", $sexoIn.":", $numeroIn.":", $cidadeIn.":", $telefoneIn.":", $celularIn.":", 
-                 $ufIn.":";            
+            echo "Por favor, complete todos os campos";            
 }
         
-//$pessoaB = $pessoaDao->getObject($datasource, $_POST['Codigo']);
 
 ?>
