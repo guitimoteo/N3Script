@@ -50,6 +50,7 @@ documento.value += texto.substring(0,1);
 
     }
 </script>
+<form action="cadastrarPessoa.php" method="POST">
 <fieldset>
 	<legend> Dados Pessoais</legend>
 	Codigo:<br>
@@ -57,7 +58,7 @@ documento.value += texto.substring(0,1);
 	CPF:<br>
 	<input type="text" name ="cpf" size="60" value=""> 
 	<input type="radio" name="sexo" value="masculino">Masculino 
-	<input type="radio" name="sexo" value="Feminino">Feminino <br>
+	<input type="radio" name="sexo" value="feminino">Feminino <br>
 	Nome:<br>
 	<input type="text" name ="nome" size="197" value=""> <br>
 	Endereco:<span style="padding-left:360px">  Numero/Comp.</span> <br>
@@ -99,18 +100,19 @@ documento.value += texto.substring(0,1);
 
 <br>
 CEP:<span style="padding-left:390px"> <button id=”btn” onclick="return getEndereco()" >Consultar</button>  Fone Residencial:</span><span style="padding-left:290px"> Celular:</span> <br>
-<input type="text" nome ="cep" id="cep" size="9" maxlength="9" value="" required pattern="\d{5}-?\d{3}" onkeypress="formatar('#####-###', this)"> <span style="padding-left:20px"> <input type="text" name ="Celular" size="60" value=""> </span> 
+<input type="text" nome ="cep" id="cep" size="9" maxlength="9" value="" required pattern="\d{5}-?\d{3}" onkeydown="formatar('#####-###', this)"> <span style="padding-left:20px"> <input type="text" name ="Celular" size="60" value=""> </span> 
 		<input type="text" name ="nome" size="60" value=""> <br>
 		
 	E-mail:<br>
-	<input type="text" name ="E-mail" size="197" value=""><br><br>
-<input type="submit" value="Cadastrar"> &nbsp;&nbsp;&nbsp
+        <input type="email" name ="E-mail" size="197" value=""><br><br>
+        <input type="submit" value="Cadastrar" formmethod="POST" formaction="cadastrarPessoa.php"> &nbsp;&nbsp;&nbsp
 <input type="submit" value="Tela Inicial"> &nbsp;&nbsp;&nbsp
 <input type="submit" value="Tela Veiculos"> &nbsp;&nbsp;&nbsp
 <input type="reset" value="LIMPAR"> 	
 
 
 </fieldset>
+</form>
 <br>
 
 </html>
