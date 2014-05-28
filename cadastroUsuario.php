@@ -6,6 +6,15 @@
 </head>
 <script src=jquery-1.11.1.min.js></script>
 <script  type="text/javascript">
+    
+    function formatar(mascara, documento){
+var i = documento.value.length;
+var saida = mascara.substring(0,1);
+var texto = mascara.substring(i)
+if (texto.substring(0,1) != saida){
+documento.value += texto.substring(0,1);
+}
+}
         function getEndereco() {
     if($.trim($('#cep').val())!= '') {
     //document.getElementById(“load”).style.display = ‘block’;
@@ -90,7 +99,7 @@
 
 <br>
 CEP:<span style="padding-left:390px"> <button id=”btn” onclick="return getEndereco()" >Consultar</button>  Fone Residencial:</span><span style="padding-left:290px"> Celular:</span> <br>
-<input type="text" nome ="cep" id="cep" size="60" value=""> <span style="padding-left:20px"> <input type="text" name ="Celular" size="60" value=""> </span> 
+<input type="text" nome ="cep" id="cep" size="9" maxlength="9" value="" required pattern="\d{5}-?\d{3}" onkeypress="formatar('#####-###', this)"> <span style="padding-left:20px"> <input type="text" name ="Celular" size="60" value=""> </span> 
 		<input type="text" name ="nome" size="60" value=""> <br>
 		
 	E-mail:<br>
