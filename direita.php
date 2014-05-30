@@ -56,7 +56,7 @@ function CadPessoa(){
 				   <!--<li style="display:block; "/><a href="santos.html" target="moldura3"><button id="bt_san" > SANTOS </button></a></li>				   -->
                    <li style="display:block; "/><a href="veiculos.php" target = "moldura3" nome=Cadastrar Veiculos">Cadastrar Veiculos</a><div></div></li>
                    <li style="display:block; "/><a href="Ticket.php" target = "moldura3" nome=Ticket">Ticket</a><div></div></li>
-                   <li><a href="relatorio.php">Relatorio</a><div></div></li>
+                   <li><a href="relatorio.php" target="moldura3">Relatorio</a><div></div></li>
                   
                    
                    
