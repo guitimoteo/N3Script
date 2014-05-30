@@ -10,3 +10,5 @@ mysql_query("INSERT INTO ticket VALUES('$usuario' ,'$veiculo','$data')") or die(
 mysql_query("INSERT INTO reg_geral VALUES('$usuario' ,'$veiculo','$data','')") or die(mysql_error());
 echo 'Cadastrado';
 echo '<META http-equiv="refresh" content="1; Url="Ticket.php"> ';
+
+mysql_close();

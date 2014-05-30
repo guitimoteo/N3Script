@@ -14,8 +14,10 @@ if(isset($cep->uf)){
  $response = array('uf'=>$cep->getUf(),'cidade'=>$cep->getCidade(),'bairro'=>$cep->getBairro(),'tipo_logradouro'=>" ",'logradouro'=>$cep->getEndereco(),'resultado'=>'2','resultado_txt'=>"sucesso");
   $jsonCep = json_encode($response);
 echo 'var resultadoCEP = '.$jsonCep;
+mysql_close();
 }  else {
   $response = array('resultado'=>'1','bairro'=>'','resultado_txt'=>"Endereço não encontrado");
   $jsonCep = json_encode($response);
   echo 'var resultadoCEP = '.$jsonCep;
+  mysql_close();
 }
