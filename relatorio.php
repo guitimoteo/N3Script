@@ -9,6 +9,14 @@
     
     
     <table>
+        <tr valign=center>
+<td class=tabval></td>
+<td class=tabval><b>codigo</b></td>
+<td class=tabval>identificacao &nbsp;</td>
+<td class=tabval>hora de entrada &nbsp</td>
+<td class=tabval>hora de saida &nbsp</td>";
+<td class=tabval></td>
+</tr>
 <?php
 include './conecta_banco.php';
 
@@ -25,7 +33,7 @@ $result = mysql_query("SELECT * FROM reg_geral") or die(mysql_error());
 			echo "</tr>";
 		}
 		echo "<tr valign=center>";
-		echo "<td class=tabval><img src=Fotos/4carros.jpg width=10 height=20></td>";
+		echo "<td class=tabval><img src=./Fotos/4carros.jpg width=10 height=20></td>";
 		echo "<td class=tabval><b>".$row['codigo']."</b></td>";
 		echo "<td class=tabval>".$row['identificacao']."&nbsp;</td>";
 		echo "<td class=tabval>".$row['hr_entrada']."&nbsp;</td>";
