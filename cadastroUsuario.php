@@ -17,19 +17,11 @@ documento.value += texto.substring(0,1);
 }
         function getEndereco() {
     if($.trim($('#cep').val())!= '') {
-    //document.getElementById(“load”).style.display = ‘block’;
-    /*
-    Para conectar no serviço e executar o json, precisamos usar a função
-    getScript do jQuery, o getScript e o dataType:”jsonp” conseguem fazer o cross-domain, os outros
-    dataTypes não possibilitam esta interação entre domínios diferentes
-    Estou chamando a url do serviço passando o parâmetro “formato=javascript” e o CEP digitado no formulário
-    http://cep.republicavirtual.com.br/web_cep.php?formato=javascript&cep=”+$(“#cep&#8221;).val()
-    */
+
     $.getScript('consultarCep.php?cep='+$('#cep').val(), function(){
-    // o getScript dá um eval no script, então é só ler!
-    //Se o resultado for igual a 1
+
     if(resultadoCEP['resultado'] && resultadoCEP['bairro'] != ''){
-    // troca o valor dos elementos
+
     $('#endereco').val(unescape(resultadoCEP['logradouro']));
     $('#bairro').val(unescape(resultadoCEP['bairro']));
     $('#cidade').val(unescape(resultadoCEP['cidade']));
@@ -54,7 +46,7 @@ documento.value += texto.substring(0,1);
 <fieldset>
 	<legend> Dados Pessoais</legend>
 	Codigo:<br>
-	<input type="text" name ="Codigo" size="60" value="" required> <br>
+        <input type="text" name ="Codigo" size="60" value="" required pattern="\d*" title="somente números"> <br>
 	CPF:<br>
 	<input type="text" name ="cpf" size="60" value="" required> 
 	<input type="radio" name="sexo" value="masculino">Masculino 
@@ -100,12 +92,12 @@ documento.value += texto.substring(0,1);
 
 <br>
 CEP:<span style="padding-left:390px"> <button id=”btn” onclick="return getEndereco()" >Consultar</button>  Fone Residencial:</span><span style="padding-left:290px"> Celular:</span> <br>
-<input type="text" name="cep" id="cep" size="9"  value="" required pattern="\d{5}-?\d{3}"/> <span style="padding-left:20px"> <input type="text" name ="telefone" size="60" value=""> </span> 
+<input type="text" name="cep" id="cep" size="9"  value="" required pattern="\d{5}-?\d{3}" title="somente números no formato 00000-000"/> <span style="padding-left:20px"> <input type="text" name ="telefone" size="60" value="" pattern="\d*"> </span> 
 <!--required pattern="\d{5}-?\d{3}"  -->		
 <input type="text" name="Celular" size="15" value=""> <br>
 		
 	E-mail:<br>
-        <input type="email" name ="E-mail" size="197" required value=""><br><br>
+        <input type="email" name ="E-mail" size="197" value=""><br><br>
         <input type="submit" value="Cadastrar" formmethod="POST" formaction="cadastrarPessoa.php"> &nbsp;&nbsp;&nbsp
         <input type="submit" value="Tela Inicial" formaction="index2.php"> &nbsp;&nbsp;&nbsp
 <input type="submit" value="Tela Veiculos"> &nbsp;&nbsp;&nbsp
